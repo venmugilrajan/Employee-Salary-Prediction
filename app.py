@@ -3,10 +3,8 @@ import pandas as pd
 import numpy as np
 import joblib
 
-# -------------------- Load the Trained Model --------------------
 model = joblib.load('linear_model.pkl')
 
-# -------------------- Page Configuration --------------------
 st.set_page_config(
     page_title="💼 Employee Salary Prediction",
     page_icon="💰",
@@ -14,7 +12,6 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 
-# -------------------- Custom Styling --------------------
 st.markdown("""
     <style>
         body {
@@ -58,11 +55,9 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# -------------------- Header --------------------
 st.markdown('<div class="main-title">💼 Employee Salary Prediction</div>', unsafe_allow_html=True)
 st.markdown('<p class="sub-text">Predict employee salary (in thousands) based on experience, skills, and performance metrics.</p>', unsafe_allow_html=True)
 
-# -------------------- Input Section --------------------
 st.subheader("📋 Enter Employee Details")
 
 col1, col2, col3 = st.columns(3)
@@ -82,7 +77,6 @@ with col3:
     location_index = st.number_input("Location Index", min_value=0, max_value=10, value=0)
     department_index = st.number_input("Department Index", min_value=0, max_value=10, value=0)
 
-# -------------------- Prepare Input --------------------
 input_data = pd.DataFrame({
     'experience': [experience],
     'education_level': [education_level],
@@ -95,7 +89,6 @@ input_data = pd.DataFrame({
     'department_index': [department_index]
 })
 
-# -------------------- Prediction --------------------
 st.write("")
 predict_btn = st.button("🔍 Predict Salary")
 
@@ -106,6 +99,5 @@ if predict_btn:
     st.markdown("---")
     st.info("This model uses **Lasso Regression with Cross-Validation**, which automatically selects the most relevant features and removes unnecessary ones.")
 
-# -------------------- Footer --------------------
 st.markdown("---")
 st.caption("👨‍💻 Developed by **Venmugil Rajan**")
