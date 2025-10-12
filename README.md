@@ -2,6 +2,9 @@
 
 A simple **Streamlit web app** that predicts employee salaries (in thousands) using **Lasso Regression**.  
 The model identifies important factors like experience, skills, and leadership to estimate salary.
+## Visit this
+Visit this in hugging face: https://huggingface.co/spaces/venmugilrajan/Employee_Salary_Prediction_AI
+Visit this in streamlit: https://salarypredictionai.streamlit.app/
 
 ---
 
@@ -25,8 +28,3 @@ The model identifies important factors like experience, skills, and leadership t
 pip install -r requirements.txt
 streamlit run app.py
 
----
-
-## Visit this
-Visit this in hugging face: https://huggingface.co/spaces/venmugilrajan/Employee_Salary_Prediction_AI
-Visit this in streamlit: https://salarypredictionai.streamlit.app/
