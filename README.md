@@ -24,3 +24,7 @@ The model identifies important factors like experience, skills, and leadership t
 ```bash
 pip install -r requirements.txt
 streamlit run app.py
+
+---
+Visit this in hugging face: https://huggingface.co/spaces/venmugilrajan/Employee_Salary_Prediction_AI
+Visit this in streamlit: https://salarypredictionai.streamlit.app/
