@@ -27,5 +27,5 @@ The model identifies important factors like experience, skills, and leadership t
 ## ⚙️ Run Locally
 ```bash
 pip install -r requirements.txt
-streamlit run app.py
+python app.py
 
